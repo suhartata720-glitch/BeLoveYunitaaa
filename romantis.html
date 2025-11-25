@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pesan Lucu Romantis</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      height: 100vh;
+      overflow: hidden;
+     background: url('witaaa.jpg') no-repeat center center;
+background-size: contain;   /* biar foto utuh, ga kepotong */
+background-color: black;    /* biar sisi kosong jadi hitam elegan */ /* ganti dengan nama foto kamu */
+      background-size: cover;
+      color: white;
+      text-shadow: -2px -2px 4px black, 2px -2px 4px black, -2px 2px 4px black, 2px 2px 4px black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #awal, #pesan {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: opacity 1s ease;
+    }
+
+    #pesan {
+      opacity: 0;
+      visibility: hidden;
+      overflow-y: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    button {
+      padding: 15px 40px;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      cursor: pointer;
+      background-color: rgba(255,255,255,0.8);
+      color: #111;
+      transition: 0.3s;
+    }
+
+    button:hover { background-color: white; transform: scale(1.05); }
+
+    .kata {
+      font-size: 1.6rem;
+      margin: 25px 0;
+      white-space: pre-wrap;
+      min-height: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Halaman Awal -->
+  <div id="awal">
+    <button onclick="bukaPesan()">💌 Buka Pesan</button>
+    <audio id="musik" src="cardigan.mp3" loop></audio> <!-- ganti nama musik kamu -->
+  </div>
+
+  <!-- Halaman Pesan -->
+  <div id="pesan">
+    <center>
+   
+    <div class="kata" data-text="Haiiiiii kamuuuuu yanggggg cantikkkk diiii fotoooo iniiiiii 😚"></div>
+    <div class="kata" data-text=",kamuuu bukannn cumannn sekedarrrr cantikkkk,akuuuuuu jugaaaaaaa mauuuu bilanggggg, kamuuuu ituuuu kayakkkk anginnnn yangggg datanggggg passs siangggg panasaaa panasannnn,bikinnnn hidupppp terasaaaaa lebihhhhh segarrrrr dannnnnn lebihhhh hidupppp 
+
+akuuuuu senanggggg bangett bisaaaa kenallllll samaaaaa kamuuuuu, setiapp kaliiii akuuuu ingattttt kamuuu, hatiiii akuuu rasanyaaaa jadiiii lembutttttt kayakkkk sebuahhhh kapasssss
+
+walaupunnnn kadanggggg kamuuu marahhhh, diammm, atauuu cuekkkkk, akuuuu tetepppp sayangggggg kamuuu karnaaaaaa yaaaaaa kamuuu ituuuu kamuuuuuu,engakkkk adaaaa orangggg lainnn yanggg bisaaa samaaa rupaaaa nyaaa dengannn kamuuuu
+
+akuuuuu engakk pernaaahhh mintaaaa banyakkkk, cumannnn pengennnn kamuuu tetapppp disinii terussss, biarrrrr akuuu bisaaa bilangggg “kamuuu lucuuu dehhh hari iniii,dannnn bahkannn setiapppp hariiiii” setiappppp pagiii~ 
+
+kamuuu tuhhhhh kayakkk laguuuuuu favoritttttt, udahhh diulanggggg berkali kalii tetapppp ajaaaa enakkkk didengerinnnn 
+
+jangannnn pernahhh bosannnn yaaaaa samaaaa akuuu, soalnyaaaa akuuu engakk akannn pernahhh bosannnn bosannnnnnn ngingetinnnn kamuuu buattt minummmmm, jangannnn telattttt makannnnnn,  jangannnn begadangggggg heheeeee
+
+akuuu janjiinnnn, meskipunnnn waktuuuu jalannnnn pelannnnn pelannnn, akuuu bakalll tetepppp jagainnn kamuuu, walaupunnnn kamuuu jauhhh diiiii sanaaaaa 🌙
+
+karnaaaa buattt akuuuu, kamuuu ituuu bukannnn cumannn orangggg spesiallllll, tapiiii rumahhhh yangggg bikinnnn hatikuuu pulangg setiap malammmm 🏠
+
+akuuu sayanggggg bangett samaaaaa kamuuu, kayakkk sayangggg akuuu samaaaa tidurrr siangggg tapiii lebihhhhh parahhhh lagiiiii
+
+pokoknyaaaaa, kamuuu tetappppp jadiiiii alasannnn kenapaaaa akuuu senyummmm setiappppp bangunnnn pagiiiii, dannnn kenapaaaa akuuu engakkkk pernahhh capeee nungguu chattt dariiiii kamuuu 
+
+jadiiiiii tolongggg yaaaaa, jangannnn pernahhh pergiiii jauhhhh dariiiiii akuuuuuu, soalnyaaaa akuuu udahhhhh nyamannnn samaaaaa kamuuuuuu💗
+
+tolonggggg jangannnnn asingggg yaaaaaa,walaupunnnn kitaaaaa banyakkk berantemmmmm nyaaaaaa,kadangggg sampaiiiii bikinnnnn sakittttt hatiiiiii,akuuuu engakkk peduliiiii,mauuuu sebanyakkkk apapunnnn kataaaa maaffff yanggg akuuu ucapkannnn,intinyaaaa akuuuu engakkkk mauuu sampaiii kehilangannnn kamuuuuuuuu.......iiiii loveeeee youuuuuuu myyyyyyy girlfirendddddd
+"></div>
+
+</center>
+  <script>
+    function bukaPesan() {
+      const musik = document.getElementById("musik");
+      musik.play();
+
+      const awal = document.getElementById("awal");
+      const pesan = document.getElementById("pesan");
+      awal.style.opacity = 0;
+
+      setTimeout(() => {
+        awal.style.display = "none";
+        pesan.style.visibility = "visible";
+        pesan.style.opacity = 1;
+        ketikSatuPersatu();
+      }, 1000);
+    }
+
+    async function ketikSatuPersatu() {
+      const teks = document.querySelectorAll(".kata");
+      for (let i = 0; i < teks.length; i++) {
+        await ketik(teks[i]);
+        await delay(800); // jeda antar kalimat
+      }
+    }
+
+    async function ketik(elemen) {
+      const text = elemen.dataset.text;
+      elemen.textContent = "";
+      for (let i = 0; i < text.length; i++) {
+        elemen.textContent += text[i];
+        elemen.scrollIntoView({ behavior: "smooth", block: "end" });
+        await delay(60); // kecepatan ketik (60ms per huruf)
+      }
+    }
+
+    function delay(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+    }
+  </script>
+
+</body>
+</html>
